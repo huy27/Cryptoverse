@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Avatar, Card, Col, Row, Select, Typography } from "antd";
 import { useGetCryptoNewsQuery } from "../services/cryptoNewsApi";
 import moment from "moment";
-import Cryptocurrencies from "./Cryptocurrencies";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import Loader from './Loader';
 

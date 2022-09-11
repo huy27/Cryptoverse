@@ -4,8 +4,8 @@ import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } fr
 import "./App.css";
 import Layout from "antd/lib/layout/layout";
 import { Link, Route, Switch } from "react-router-dom";
-import { Space, Typography } from "antd";
 import HeatMap from "./components/HeatMap";
+import CryptoChart from './components/CryptoChart';
 
 const App = () => {
     return (
@@ -34,6 +34,9 @@ const App = () => {
                             </Route>
                             <Route exact path="/heat">
                                 <HeatMap />
+                            </Route>
+                            <Route exact path="/cryptocurrencies-chart">
+                                <CryptoChart />
                             </Route>
                         </Switch>
                     </div>
