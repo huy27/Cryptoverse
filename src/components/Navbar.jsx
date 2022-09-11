@@ -5,12 +5,12 @@ import {
     BulbOutlined,
     MenuOutlined,
     HeatMapOutlined,
+    StockOutlined
 } from "@ant-design/icons";
 import { Avatar, Button, Menu, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
-import icon from "../images/cryptocurrency.png";
 
 const items = [
     { key: "1", label: "Home", path: "/", icon: <HomeOutlined /> },
@@ -18,6 +18,7 @@ const items = [
     { key: "3", label: "Exchanges", path: "/exchanges", icon: <MoneyCollectOutlined /> },
     { key: "4", label: "News", path: "/news", icon: <BulbOutlined /> },
     { key: "5", label: "Heat", path: "/heat", icon: <HeatMapOutlined /> },
+    { key: "6", label: "CryptoCurrencies chart", path: "/cryptocurrencies-chart", icon: <StockOutlined /> },
 ];
 
 const Navbar = () => {
