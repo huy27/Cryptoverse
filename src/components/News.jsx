@@ -15,9 +15,11 @@ const News = ({ simplified }) => {
         newsCategory,
         count: simplified ? 6 : 100,
     });
+    
     const { data } = useGetCryptosQuery(100);
 
     if (!cryptoNews?.value) return <Loader />
+    let cryptoNewsClone = [...cryptoNews?.value];
 
     return (
         <Row gutter={[24, 24]}>
@@ -42,7 +44,7 @@ const News = ({ simplified }) => {
                     </Select>
                 </Col>
             )}
-            {cryptoNews.value.map((news, i) => (
+            {cryptoNewsClone.sort((prev, next) => new Date(next.datePublished) - new Date(prev.datePublished)).map((news, i) => (
                 <Col xs={24} sm={12} lg={8} key={i}>
                     <Card hoverable className="news-card">
                         <a href={news.url} target="_blank" rel="noreferrer">
